@@ -1,7 +1,7 @@
 html, body {
     height: 100%;
     margin: 0;
-    background-image: url("4.jpg");
+    background-image: url("icecream2.jpg");
   }
   .game {
     display: flex;
@@ -9,8 +9,8 @@ html, body {
     justify-content: center;
   } 
   canvas {
-    border: 2px solid black;
-    border-style: double;
+    border: 2px solid white;
+    border-style:hidden;
     background-color: black;
   }
   .nav{

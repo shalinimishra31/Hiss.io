@@ -68,7 +68,7 @@ function loop() {
   }
 
   // draw apple
-  context.fillStyle = 'red';
+  context.fillStyle = 'cyan';
   context.fillRect(apple.x, apple.y, grid-1, grid-1);
 
   // draw snake one cell at a time
@@ -81,7 +81,7 @@ function loop() {
     // snake ate apple
     if (cell.x === apple.x && cell.y === apple.y) {
       snake.maxCells++;
-      if(snake.maxCells > 9)
+      if(snake.maxCells > 20)
       {
         hello = document.querySelector(".hello");
         hello.innerHTML = `<a href="index2.html">click here for level two</a>`;

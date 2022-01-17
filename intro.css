@@ -28,12 +28,12 @@
     border-radius: 40px;
 }
 .desc:hover{
-    background-color: rgb(243, 12, 12);
+    background-color: rgb(228, 165, 175);
     color:white;
     border:5px solid white;
 }
 .inst:hover{
-    background-color: rgb(243, 12, 12);
+    background-color: rgb(221, 159, 170);
     color:white;
     border:5px solid white;
 }
@@ -63,6 +63,6 @@ img{
 }
 .mainbody{
     /* background-image: url("images.jfif"); */
-    background-image: url("4.jpg");
+    background-image: url("icecream.webp");
     margin-top:10px;
 }

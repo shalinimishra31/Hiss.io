@@ -1,0 +1,68 @@
+.desc{
+    /* background-color: rgb(8, 153, 8);
+    color:black; */
+    background-color: white;
+    color:black;
+    margin:1%;
+    padding-top:2%;
+    padding-bottom: 0.5%;
+    padding-left:165px;
+    padding-right:125px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-size: large;
+    cursor: pointer;
+    border-radius: 40px;
+}
+.inst
+{
+    background-color: white;
+    color:black;
+    margin:1%;
+    padding-top:2%;
+    padding-bottom: 0.5%;
+    padding-left:130px;
+    padding-right:90px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-size: large;
+    cursor: pointer;
+    border-radius: 40px;
+}
+.desc:hover{
+    background-color: rgb(243, 12, 12);
+    color:white;
+    border:5px solid white;
+}
+.inst:hover{
+    background-color: rgb(243, 12, 12);
+    color:white;
+    border:5px solid white;
+}
+img{
+    margin-top:1%;
+    width:20%;
+    border-radius: 100px; 
+}
+.firstDiv{
+    display: flex;
+    flex-direction: length;
+    width: 380px;
+    height: auto;
+    margin-left:34%;
+    position:absolute;
+}
+.heading{
+    color:black;
+    margin:0.5%;
+    padding-top:0.5%;
+    padding-bottom: 0.5%;
+    padding-left:1%;
+    padding-right:1%;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-size: large;
+    margin-left:43%;
+}
+.mainbody{
+    /* background-image: url("images.jfif"); */
+    background-image: url("4.jpg");
+    margin-top:10px;
+}

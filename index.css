@@ -1,0 +1,19 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background-image: url("4.jpg");
+  }
+  .game {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } 
+  canvas {
+    border: 2px solid black;
+    border-style: double;
+    background-color: black;
+  }
+  .nav{
+      padding-left:450%;
+      margin-left: 450%;
+  }

@@ -1,0 +1,21 @@
+body{
+    background-image: url("4.jpg");
+}
+.snake{
+    width: 40px;
+}
+.main{
+    margin-left:50px;
+    font-size: 25px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color:black;
+}
+.navbar{
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: green;
+}
+.inst{
+    margin:0px;
+}

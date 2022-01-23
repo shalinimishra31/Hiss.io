@@ -32,7 +32,7 @@ function loop() {
   requestAnimationFrame(loop);
 
   // slow game loop to 15 fps instead of 60 (60/15 = 4)
-  if (++count < 6) {
+  if (++count < 4) {
     return;
   }
 
@@ -44,13 +44,15 @@ function loop() {
   snake.y += snake.dy;
 
 //   wrap snake position horizontally on edge of screen
-if (snake.x < 0) {
-  snake.x = canvas.width - grid;
-}
-else if (snake.x >= canvas.width) {
-  snake.x = 0;
-}
-
+  if (snake.x < 0) {
+    hello = document.querySelector(".hello");
+    hello.innerHTML = `<a href="intro.html"><button class="nextlevel"> Home page </button></a>`;
+  }
+  else if (snake.x >= canvas.width) {
+    hello = document.querySelector(".hello");
+    hello.innerHTML = `<a href="intro.html"><button class="nextlevel"> Home page </button></a>`;
+  }
+  
   // wrap snake position vertically on edge of screen
   if (snake.y < 0) {
     hello = document.querySelector(".hello");
@@ -74,7 +76,7 @@ else if (snake.x >= canvas.width) {
   context.fillRect(apple.x, apple.y, grid-1, grid-1);
 
   // draw snake one cell at a time
-  context.fillStyle = 'red';
+  context.fillStyle = 'pink';
   snake.cells.forEach(function(cell, index) {
     
     // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is
@@ -86,8 +88,8 @@ else if (snake.x >= canvas.width) {
       if(snake.maxCells > 5)
       {
         hello = document.querySelector(".hello");
-        hello.innerHTML = `<a href="intro.html"><button class="nextlevel">Home Page &#128580;</button></a>
-        <a href="index4.html"><button class="nextlevel">Next &#128526;</button></a>`;
+        hello.innerHTML = `<img src="party.gif">
+        (: Good Game Well Played :)`;
       }
 
       // canvas is 400x400 which is 25x25 grids 
@@ -103,8 +105,8 @@ else if (snake.x >= canvas.width) {
       {
         snake.x = 0;
         snake.y = 0;
-        hello = document.querySelector(".hello");
-        hello.innerHTML = `<a href="intro.html"><button class="nextlevel">Home page</button></a>`;
+        // hello = document.querySelector(".hello");
+        // hello.innerHTML = `<a href="intro.html"><button class="nextlevel">Home page</button></a>`;
         // snake.x = 160;
         // snake.y = 160;
         // snake.cells = [];

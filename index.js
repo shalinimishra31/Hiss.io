@@ -81,10 +81,11 @@ function loop() {
     // snake ate apple
     if (cell.x === apple.x && cell.y === apple.y) {
       snake.maxCells++;
-      if(snake.maxCells > 20)
+      if(snake.maxCells > 5)
       {
         hello = document.querySelector(".hello");
-        hello.innerHTML = `<a href="index2.html">click here for level two</a>`;
+        hello.innerHTML = `<a href="intro.html"><button class="nextlevel">Home Page &#128580;</button></a>
+        <a href="index2.html"><button class="nextlevel">Next &#128526;</button></a>`;
       }
 
       // canvas is 400x400 which is 25x25 grids 
@@ -101,7 +102,7 @@ function loop() {
         snake.x = 0;
         snake.y = 0;
         hello = document.querySelector(".hello");
-        hello.innerHTML = `<a href="index2.html">NHK</a>`;
+        hello.innerHTML = `<a href="intro.html"><button class="nextlevel">Home page</button></a>`;
         // snake.x = 160;
         // snake.y = 160;
         // snake.cells = [];

@@ -1,5 +1,7 @@
 body{
-    background-image: url("4.jpg");
+    background-image:url("green_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 110%;
 }
 .snake{
     width: 40px;
@@ -14,8 +16,62 @@ body{
     font-size: 3rem;
     text-align: center;
     font-family: 'Mochiy Pop P One', sans-serif;
-    color: green;
 }
-.inst{
-    margin:0px;
+.inst:nth-of-type(2n){
+    margin-top:-30px;
+    margin-bottom:-30px;
+    color:#ddbea9;
+}
+.inst:nth-of-type(2n+1){
+    color:#ffe8d6;
+}
+.table{
+    background-color: black;
+    color:white;
+    margin:20px;
+    font-family:'Mochiy Pop P One', sans-serif ;
+}
+.thead{
+    font-size: 15px;
+    padding:10px;
+    margin:10px;
+}
+.tr:nth-of-type(2n){
+    color:black;
+    background-color: #b7e4c7;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.tr:nth-of-type(2n+1){
+    color:white;
+    background-color: #606c38;
+    padding-top:10px;
+    padding-bottom: 10px;
+.maintr{
+    background-color: black;
+    padding-top:20px;
+    padding-bottom: 20px;
+    color:white;
+}
+.td{
+    padding:30px;
+    font-size: 10px;
+}
+@media screen and (max-width:800px) 
+{
+  .navbar,.main,.inst{
+      width:100%;
+      height:auto;
+      margin:0%;
+      padding;0%;
+  }
+  .navbar{
+      font-size: 30px;
+  }
+  .inst{
+      font-size: 20px;
+  }
+  body{
+      width:360px;
+  }
 }

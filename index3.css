@@ -13,7 +13,9 @@ body {
   canvas {
     border: 2px solid white;
     border-style:hidden;
-    background-color: #e6eee1;
+    background-color: #dac3e8;
+    border-top:5px solid red;
+    border-bottom:5px solid red;
   }
   .nextlevel{
     margin-top:100px;

@@ -4,6 +4,9 @@ var context = canvas.getContext('2d');
 var grid = 16;
 var count = 0;
   
+var score = document.querySelector("p");
+score.className = "score";
+
 var snake = {
   x: 160,
   y: 160,
@@ -50,7 +53,7 @@ function loop() {
   else if (snake.x >= canvas.width) {
     snake.x = 0;
   }
-  
+ 
   // wrap snake position vertically on edge of screen
   if (snake.y < 0) {
     snake.y = canvas.height - grid;
@@ -81,7 +84,9 @@ function loop() {
     // snake ate apple
     if (cell.x === apple.x && cell.y === apple.y) {
       snake.maxCells++;
-      if(snake.maxCells > 5)
+      score.innerHTML = `score : ${snake.maxCells-4}`;
+
+      if(snake.maxCells > 10)
       {
         hello = document.querySelector(".hello");
         hello.innerHTML = `<a href="intro.html"><button class="nextlevel">Home Page &#128580;</button></a>

@@ -13,6 +13,7 @@
     cursor: pointer;
     border-radius: 40px;
     outline: none;
+    transition:0.25s;
 }
 .inst
 {
@@ -28,6 +29,7 @@
     cursor: pointer;
     border-radius: 40px;
     outline: none;
+    transition:0.25s;
 }
 .desc:hover{
     background-color: rgb(228, 165, 175);

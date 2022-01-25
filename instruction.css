@@ -56,7 +56,26 @@ body{
 }
 .td{
     padding:30px;
-    font-size: 10px;
+    font-size: 1.5rem;
+}
+.nextlevel{
+    margin:20px 45%;
+    padding: 0 50px;
+    font-size: 3rem;
+    color:white;
+    background-color: skyblue;
+    border-radius:50px;
+    outline:none;
+      border: 3px solid white;
+    transition: 0.25s;
+}
+.nextlevel:hover{
+  color:white;
+  background-color: rgb(148, 75, 216);
+  border:4px solid black;
+  cursor: pointer;
+  transform: translateY(-0.25em) ;  
+  box-shadow: 0 0.50em  0.50em -0.40em black;
 }
 @media screen and (max-width:800px) 
 {
@@ -67,11 +86,20 @@ body{
   } 
   .navbar
   {
-      font-size: 10px;
-      margin-left:0px;
+      font-size: 30px;
+      margin-left:-10px;
   }
   .inst
   {
+      font-size: 15px;
+      margin-left:-40px;
+  }
+  table{
       font-size: 10px;
+      width:90%;
+      margin-left:2px;
+  }
+  .nextlevel{
+      margin-left:28%;
   }
 }

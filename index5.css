@@ -26,19 +26,31 @@ body {
     outline:none;
     margin-left:20px;
     margin-right:20px;
-    border: 4px solid white;
+    border: 3px solid white;
+    transition: 0.25s;
 }
 .nextlevel:hover{
   color:white;
   background-color: rgb(148, 75, 216);
   border:4px solid black;
   cursor: pointer;
+  transform: translateY(-0.25em) ;  
+  box-shadow: 0 0.50em  0.50em -0.40em black;
 }
-/* .wall{
-  border-bottom:9px solid #774936;
-  margin-left:440px;
-  margin-right:440px;
-} */
+.score{
+  color:white;
+  background-color: black;
+  font-size:2rem;
+  height: 30px;
+  display: inline;
+  padding-top:10px;
+  padding-bottom:2px;
+  margin-left:34.2%;
+  padding-right:10.75%;
+  padding-left: 10%;
+  margin-bottom:2px;
+  font-family: 'Mochiy Pop P One', sans-serif;
+}
 @media screen and (max-width:800px) 
 {
   .game,canvas,.nav{

@@ -86,10 +86,10 @@ function loop() {
       snake.maxCells++;
       score.innerHTML = `score : ${snake.maxCells-4}`;
 
-      if(snake.maxCells > 10)
+      if(snake.maxCells > 23)
       {
         hello = document.querySelector(".hello");
-        hello.innerHTML = `<a href="intro.html"><button class="nextlevel">Home Page &#128580;</button></a>
+        hello.innerHTML = `<a href="index.html"><button class="nextlevel">Home Page &#128580;</button></a>
         <a href="index2.html"><button class="nextlevel">Next &#128526;</button></a>`;
       }
 

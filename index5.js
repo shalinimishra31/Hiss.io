@@ -11,14 +11,11 @@ var snake = {
   x: 160,
   y: 160,
   
-  // snake velocity. moves one grid length every frame in either the x or y direction
   dx: grid,
   dy: 0,
   
-  // keep track of all grids the snake body occupies
   cells: [],
   
-  // length of the snake. grows when eating an apple
   maxCells: 4
 };
 var apple = {
@@ -30,11 +27,9 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-// game loop
 function loop() {
   requestAnimationFrame(loop);
 
-  // slow game loop to 15 fps instead of 60 (60/15 = 4)
   if (++count < 4) {
     return;
   }
@@ -42,39 +37,33 @@ function loop() {
   count = 0;
   context.clearRect(0,0,canvas.width,canvas.height);
 
-  // move snake by it's velocity
   snake.x += snake.dx;
   snake.y += snake.dy;
 
-//   wrap snake position horizontally on edge of screen
   if (snake.x < 0) {
     hello = document.querySelector(".hello");
-    hello.innerHTML = `<a href="intro.html"><button class="nextlevel"> Home page </button></a>`;
+    hello.innerHTML = `<a href="index.html"><button class="nextlevel">Play again </button></a>`;
   }
   else if (snake.x >= canvas.width) {
     hello = document.querySelector(".hello");
-    hello.innerHTML = `<a href="intro.html"><button class="nextlevel"> Home page </button></a>`;
+    hello.innerHTML = `<a href="index.html"><button class="nextlevel">Play again </button></a>`;
   }
   
-  // wrap snake position vertically on edge of screen
   if (snake.y < 0) {
     hello = document.querySelector(".hello");
-    hello.innerHTML = `<a href="intro.html"><button class="nextlevel"> Home page </button></a>`;
+    hello.innerHTML = `<a href="index.html"><button class="nextlevel">Play again </button></a>`;
   }
   else if (snake.y >= canvas.height) {
     hello = document.querySelector(".hello");
-    hello.innerHTML = `<a href="intro.html"><button class="nextlevel"> Home page </button></a>`;
+    hello.innerHTML = `<a href="index.html"><button class="nextlevel">Play again </button></a>`;
   }
 
-  // keep track of where snake has been. front of the array is always the head
   snake.cells.unshift({x: snake.x, y: snake.y});
 
-  // remove cells as we move away from them
   if (snake.cells.length > snake.maxCells) {
     snake.cells.pop();
   }
 
-  // draw apple
   context.fillStyle = 'yellow';
   context.fillRect(apple.x, apple.y, grid-1, grid-1);
 
@@ -82,20 +71,18 @@ function loop() {
   context.fillStyle = 'pink';
   snake.cells.forEach(function(cell, index) {
     
-    // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is
     context.fillRect(cell.x, cell.y, grid-1, grid-1);  
-
-    // snake ate apple
+    
     if (cell.x === apple.x && cell.y === apple.y) {
       snake.maxCells++;
       score.innerHTML = `score : ${snake.maxCells-4}`;
-      if(snake.maxCells > 5)
+      if(snake.maxCells > 23)
       {
         hello = document.querySelector(".hello");
-        hello.innerHTML = `<img src="party.gif">
-        (: Good Game Well Played :)`;
+        hello.innerHTML = `<h1 class="winner"> Congratulations, Well played </h1>`;
+        setTimeout(() => {
+        }, 5000);
       }
-
       // canvas is 400x400 which is 25x25 grids 
       apple.x = getRandomInt(0, 25) * grid;
       apple.y = getRandomInt(0, 25) * grid;

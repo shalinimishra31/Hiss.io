@@ -107,7 +107,7 @@ function loop() {
         snake.x = 0;
         snake.y = 0;
         hello = document.querySelector(".hello");
-        hello.innerHTML = `<a href="intro.html"><button class="nextlevel">Home page</button></a>`;
+        hello.innerHTML = `<a href="index.html"><button class="nextlevel">Home page</button></a>`;
         // snake.x = 160;
         // snake.y = 160;
         // snake.cells = [];

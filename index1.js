@@ -71,11 +71,11 @@ function loop() {
   }
 
   // draw apple
-  context.fillStyle = 'cyan';
+  context.fillStyle = 'black';
   context.fillRect(apple.x, apple.y, grid-1, grid-1);
 
   // draw snake one cell at a time
-  context.fillStyle = 'green';
+  context.fillStyle = '#fdfffc';
   snake.cells.forEach(function(cell, index) {
     
     // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is

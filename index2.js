@@ -71,11 +71,11 @@ function loop() {
   }
 
   // draw apple
-  context.fillStyle = 'cyan';
+  context.fillStyle = 'black';
   context.fillRect(apple.x, apple.y, grid-1, grid-1);
 
   // draw snake one cell at a time
-  context.fillStyle = 'yellow';
+  context.fillStyle = '#ffe66d';
   snake.cells.forEach(function(cell, index) {
     
     // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is
@@ -85,7 +85,7 @@ function loop() {
     if (cell.x === apple.x && cell.y === apple.y) {
       snake.maxCells++;
       score.innerHTML = `score : ${snake.maxCells-4}`;
-      if(snake.maxCells > 10)
+      if(snake.maxCells > 23)
       {
         hello = document.querySelector(".hello");
         hello.innerHTML = `<a href="index.html"><button class="nextlevel">Home Page &#128580;</button></a>

@@ -47,23 +47,28 @@ function loop() {
   snake.y += snake.dy;
 
 //   wrap snake position horizontally on edge of screen
-if (snake.x < 0) {
-  snake.x = canvas.width - grid;
-}
-else if (snake.x >= canvas.width) {
-  snake.x = 0;
-}
-
-  // wrap snake position vertically on edge of screen
-  if (snake.y < 0) {
+if(snake.maxCells<23)
+{
+    if (snake.x < 0) 
+    {
+      snake.x = canvas.width - grid;
+    }
+    else if (snake.x >= canvas.width) 
+    {
+       snake.x = 0;
+    }
+// wrap snake position vertically on edge of screen
+   if (snake.y < 0) 
+   {
     hello = document.querySelector(".hello");
-    hello.innerHTML = `<a href="intro.html"><button class="nextlevel"> Home page </button></a>`;
-  }
-  else if (snake.y >= canvas.height) {
-    hello = document.querySelector(".hello");
-    hello.innerHTML = `<a href="intro.html"><button class="nextlevel"> Home page </button></a>`;
-  }
-
+    hello.innerHTML = `<a href="index.html"><button class="nextlevel"> Home page </button></a>`;
+   }
+   else if (snake.y >= canvas.height) 
+   {
+     hello = document.querySelector(".hello");
+     hello.innerHTML = `<a href="index.html"><button class="nextlevel"> Home page </button></a>`;
+   }
+}
   // keep track of where snake has been. front of the array is always the head
   snake.cells.unshift({x: snake.x, y: snake.y});
 
@@ -77,7 +82,7 @@ else if (snake.x >= canvas.width) {
   context.fillRect(apple.x, apple.y, grid-1, grid-1);
 
   // draw snake one cell at a time
-  context.fillStyle = 'red';
+  context.fillStyle = '#ff7d00';
   snake.cells.forEach(function(cell, index) {
     
     // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is

@@ -86,6 +86,9 @@ body{
 }
 @media screen and (max-width:800px) 
 {
+    body{
+        width: 60%;
+    }
   .main,.inst
   {
       width:100%;
@@ -93,7 +96,7 @@ body{
   } 
   .navbar
   {
-      font-size: 30px;
+      font-size: 25px;
       margin-left:-10px;
   }
   .inst
@@ -103,8 +106,8 @@ body{
   }
   table{
       font-size: 10px;
-      width:90%;
-      margin-left:2px;
+      width:300px;
+      margin-left:0px;
   }
   .nextlevel{
       margin-left:28%;

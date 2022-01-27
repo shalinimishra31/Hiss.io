@@ -47,6 +47,8 @@ function loop() {
   snake.y += snake.dy;
 
 //   wrap snake position horizontally on edge of screen
+if(snake.maxCells < 23)
+{
   if (snake.x < 0) {
     hello = document.querySelector(".hello");
     hello.innerHTML = `<a href="intro.html"><button class="nextlevel"> Home page </button></a>`;
@@ -63,7 +65,7 @@ function loop() {
   else if (snake.y >= canvas.height) {
     snake.y = 0;
   }
-
+}
   // keep track of where snake has been. front of the array is always the head
   snake.cells.unshift({x: snake.x, y: snake.y});
 
@@ -73,11 +75,11 @@ function loop() {
   }
 
   // draw apple
-  context.fillStyle = 'yellow';
+  context.fillStyle = 'black';
   context.fillRect(apple.x, apple.y, grid-1, grid-1);
 
   // draw snake one cell at a time
-  context.fillStyle = 'orange';
+  context.fillStyle = 'red';
   snake.cells.forEach(function(cell, index) {
     
     // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is

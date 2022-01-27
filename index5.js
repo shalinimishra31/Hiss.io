@@ -39,7 +39,8 @@ function loop() {
 
   snake.x += snake.dx;
   snake.y += snake.dy;
-
+if(snake.maxCells < 23)
+{
   if (snake.x < 0) {
     hello = document.querySelector(".hello");
     hello.innerHTML = `<a href="index.html"><button class="nextlevel">Play again </button></a>`;
@@ -57,18 +58,18 @@ function loop() {
     hello = document.querySelector(".hello");
     hello.innerHTML = `<a href="index.html"><button class="nextlevel">Play again </button></a>`;
   }
-
+}
   snake.cells.unshift({x: snake.x, y: snake.y});
 
   if (snake.cells.length > snake.maxCells) {
     snake.cells.pop();
   }
 
-  context.fillStyle = 'yellow';
+  context.fillStyle = 'black';
   context.fillRect(apple.x, apple.y, grid-1, grid-1);
 
   // draw snake one cell at a time
-  context.fillStyle = 'pink';
+  context.fillStyle = 'green';
   snake.cells.forEach(function(cell, index) {
     
     context.fillRect(cell.x, cell.y, grid-1, grid-1);  
@@ -80,8 +81,6 @@ function loop() {
       {
         hello = document.querySelector(".hello");
         hello.innerHTML = `<h1 class="winner"> Congratulations, Well played </h1>`;
-        setTimeout(() => {
-        }, 5000);
       }
       // canvas is 400x400 which is 25x25 grids 
       apple.x = getRandomInt(0, 25) * grid;

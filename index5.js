@@ -65,7 +65,7 @@ if(snake.maxCells < 23)
     snake.cells.pop();
   }
 
-  context.fillStyle = 'black';
+  context.fillStyle = '#ff006e';
   context.fillRect(apple.x, apple.y, grid-1, grid-1);
 
   // draw snake one cell at a time

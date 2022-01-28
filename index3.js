@@ -78,7 +78,7 @@ if(snake.maxCells<23)
   }
 
   // draw apple
-  context.fillStyle = 'yellow';
+  context.fillStyle = '#ff006e';
   context.fillRect(apple.x, apple.y, grid-1, grid-1);
 
   // draw snake one cell at a time
